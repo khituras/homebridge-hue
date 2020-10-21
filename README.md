@@ -12,6 +12,16 @@ There are major changes in this fork with regards to the upstream repository:
 1. This is a HOOBS plugin. The changes that had been applied by the HOOBs team when creating the official "HOOBS homebridge-hue" plugin. Only the log level changes were not done.
 2. If no lights are reported by deCONZ, the plugin waits 15 seconds and then tries again before exposing its state to homebridge. This solves the issue that lights disappear from HomeKit after a restart of the server running deCONZ and homebridge. However, when one has no lights, this plugin would never fully start. But then again, this fork is not required in that case anyway.
 
+## Installation in HOOBS
+
+There might be better ways to do this, but here is what I did to get this code to run with HOOBS:
+1. Install the official `homebridge-hue` plugin through the HOOBS plugin manager and configure it.
+2. Log into your HOOBS server and navigate to `.hoobs/node_modules`
+3. Delete or move the `homebridge-hue` directory.
+4. Download or `git clone` this repository to `homebridge-hue`.
+
+Thus, the code of this repository is just a drop-in replacement for the original plugin. Hope it works for you, too :-)
+
 <span align="center">
   
 # Homebridge Hue
