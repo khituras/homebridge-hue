@@ -1,8 +1,19 @@
 <p align="center">
   <img src="homebridge-hue.png" height="200px">  
 </p>
+
 <span align="center">
 
+# About this fork
+
+</span>
+
+There are major changes in this fork with regards to the upstream repository: 
+1. This is a HOOBS plugin. The changes that had been applied by the HOOBs team when creating the official "HOOBS homebridge-hue" plugin. Only the log level changes were not done.
+2. If no lights are reported by deCONZ, the plugin waits 15 seconds and then tries again before exposing its state to homebridge. This solves the issue that lights disappear from HomeKit after a restart of the server running deCONZ and homebridge. However, when one has no lights, this plugin would never fully start. But then again, this fork is not required in that case anyway.
+
+<span align="center">
+  
 # Homebridge Hue
 [![Downloads](https://img.shields.io/npm/dt/homebridge-hue)](https://www.npmjs.com/package/homebridge-hue)
 [![Version](https://img.shields.io/npm/v/homebridge-hue)](https://www.npmjs.com/package/homebridge-hue)
